@@ -1,0 +1,30 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Cat {
+  image: String!
+}
+
+type Query {
+  cats: [Cat!]!
+  cat(id: Int!): Cat!
+}
+
+type Mutation {
+  createCat(createCatInput: CreateCatInput!): Cat!
+  updateCat(updateCatInput: UpdateCatInput!): Cat!
+  removeCat(id: Int!): Cat!
+}
+
+input CreateCatInput {
+  image: Upload!
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+input UpdateCatInput {
+  image: Upload
+  id: Int!
+}
