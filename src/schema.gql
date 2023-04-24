@@ -2,29 +2,29 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Cat {
+type File {
   image: String!
 }
 
 type Query {
-  cats: [Cat!]!
-  cat(id: Int!): Cat!
+  files: [File!]!
+  file(id: Int!): File!
 }
 
 type Mutation {
-  createCat(createCatInput: CreateCatInput!): Cat!
-  updateCat(updateCatInput: UpdateCatInput!): Cat!
-  removeCat(id: Int!): Cat!
+  createFile(createFileInput: CreateFileInput!): File!
+  updateFile(updateFileInput: UpdateFileInput!): File!
+  removeFile(id: Int!): File!
 }
 
-input CreateCatInput {
+input CreateFileInput {
   image: Upload!
 }
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
 
-input UpdateCatInput {
+input UpdateFileInput {
   image: Upload
   id: Int!
 }
